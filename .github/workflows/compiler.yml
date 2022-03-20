@@ -10,6 +10,8 @@ jobs:
     container:
       image: xyzuan/xdocker:latest
     steps:
+      - uses: actions/checkout@v2
+      - name: Build Zombie Kernel
         run: |
           bash kernel_build.sh
         env:
