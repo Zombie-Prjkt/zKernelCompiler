@@ -39,7 +39,7 @@ PATH="${PATH}:${CLANG_ROOTDIR}/bin"
 function check() {
 echo ================================================
 echo xKernelCompiler
-echo version : rev1.5 - gaspoll
+echo version : rev1.5 - Zombies
 echo ================================================
 echo BUILDER NAME = ${KBUILD_BUILD_USER}
 echo BUILDER HOSTNAME = ${KBUILD_BUILD_HOST}
