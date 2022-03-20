@@ -1,0 +1,25 @@
+name: zKernel Compiler
+
+on:
+  push:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container:
+      image: xyzuan/xdocker:latest
+    steps:
+        run: |
+          bash kernel_build.sh
+        env:
+          KERNEL_NAME: ${{ secrets.KERNEL_NAME }}
+          KERNEL_SOURCE: ${{ secrets.KERNEL_SOURCE }}
+          KERNEL_BRANCH: ${{ secrets.KERNEL_BRANCH }}
+          DEVICE_CODENAME: ${{ secrets.DEVICE_CODENAME }}
+          DEVICE_DEFCONFIG: ${{ secrets.DEVICE_DEFCONFIG }}
+          ANYKERNEL: ${{ secrets.ANYKERNEL }}
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          BUILD_USER: ${{ secrets.BUILD_USER }}
+          BUILD_HOST: ${{ secrets.BUILD_HOST }}
